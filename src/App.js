@@ -11,6 +11,8 @@ import Iphone from "./components/Iphone";
 import Laptop from "./components/Laptop";
 import MarutiSuzuki from "./components/MarutiSuzuki";
 import Samsung from "./components/Samsung";
+import OpenKarwao from "./components/OpenKarwao";
+import Event from "./components/Event";
 export default function App() {
   return (
     <>
@@ -26,12 +28,11 @@ export default function App() {
           <Route path="contact" element={<Contact />}></Route>
           <Route path="service">
             <Route path = "" element={<Service />}></Route>
-            <Route path="joota" element={<JootaJapani />}></Route>
-            <Route path="iphone" element={<Iphone />}></Route>
-            <Route path="laptop" element={<Laptop />}></Route>
-            <Route path="suzuki" element={<MarutiSuzuki />}></Route>
-            <Route path="samsung" element={<Samsung />}></Route>
+            <Route path=":a/:b/:c/:d" element={<OpenKarwao />}></Route>
+    
           </Route>
+
+          <Route path="event" element={<Event />}></Route>
 
 
 

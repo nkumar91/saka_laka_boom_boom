@@ -8,8 +8,7 @@ function maiCandaJaunga(){
 }
 
 const maiCandaJaunga2 = async (b)=>{
-  a = b;
-    
+  a = b;  
 }
 
 const handleSubmit = (event)=>{
@@ -22,7 +21,6 @@ return(
         <h1>Hello {a}</h1>
         <button onClick={maiCandaJaunga}>Click Kro Na !!</button>
         <button onClick={()=>maiCandaJaunga2(890)}>Mujhe Click Mat Karo</button>
-
 
         <form onSubmit={handleSubmit}>
             <input type="text" name="name"></input>

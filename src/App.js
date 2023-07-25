@@ -13,6 +13,7 @@ import MarutiSuzuki from "./components/MarutiSuzuki";
 import Samsung from "./components/Samsung";
 import OpenKarwao from "./components/OpenKarwao";
 import Event from "./components/Event";
+import Event2 from "./components/Event2";
 export default function App() {
   return (
     <>
@@ -32,7 +33,7 @@ export default function App() {
     
           </Route>
 
-          <Route path="event" element={<Event />}></Route>
+          <Route path="event" element={<Event2 />}></Route>
 
 
 

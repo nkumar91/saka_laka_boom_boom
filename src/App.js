@@ -14,6 +14,7 @@ import Samsung from "./components/Samsung";
 import OpenKarwao from "./components/OpenKarwao";
 import Event from "./components/Event";
 import Event2 from "./components/Event2";
+import Effect from "./components/Effect";
 export default function App() {
   return (
     <>
@@ -34,6 +35,7 @@ export default function App() {
           </Route>
 
           <Route path="event" element={<Event2 />}></Route>
+          <Route path="effect" element={<Effect />}></Route>
 
 
 

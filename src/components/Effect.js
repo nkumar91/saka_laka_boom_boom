@@ -1,39 +1,52 @@
 import { useEffect, useState } from "react"
+import { Container, Row,Col } from "react-bootstrap"
+import EffectKaro from "./EffectKaro";
 
-export default function Effect(){
-    const [data,setData] = useState(0)
-    const [r,setR]  = useState([])
+export default function Effect() {
+  const [r, setR] = useState([]);
+  const [id,setId] = useState();
+  //setData(90)
+  const url = "https://reqres.in/api/users?page=2"
 
-    //setData(90)
-   const url = "https://reqres.in/api/users?page=2"
-
-  async function callApi(){
-    {console.log("API")}
-   const res =  await fetch(url)
-   const response = await res.json();
+  async function callApi() {
+    const res = await fetch(url)
+    const response = await res.json();
     setR(response.data);
-  } 
+  }
 
-useEffect(function(){
-callApi();
-},[])
-  
-   
-    return(
-      
-        <>
-          {console.log("Ui")}
-        <h1>effect khul gaya</h1>
+  useEffect(function () {
+    callApi();
+  }, [])   // []  dependendecy
 
-        <h1>{data}</h1>
+
+  function singleUser(emp_id){
+    setId(emp_id)
+  }
+
+  return (
+    <>
+     <Container>
+      <Row>
+        <Col md={3}>
         {
-            r.map(e=>
-                <h1>{e.first_name}</h1>
-                )
-        }
+        r.map(e =>
+          <div style={{cursor:"pointer"}} onClick={()=>singleUser(e.id)}>
+            <p>{e.first_name} <img src={e.avatar} width={100} height={100}></img></p>
+          </div>
+        )
+      }
+        </Col>
+        <Col md={9}>
+          <EffectKaro   monko = {id} />
+        </Col>
+      </Row>
+     </Container>
+
+   
+     
 
 
-        
-        </>
-    )
+
+    </>
+  )
 }

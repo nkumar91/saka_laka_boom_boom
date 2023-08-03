@@ -12,6 +12,7 @@ export default function Header(){
                     <li><Link to="/contact">Contact</Link></li>
                     <li><Link to="/service">Service</Link></li>
                     <li><Link to="/event">Event</Link></li>
+                    <li><Link to="/myform">myForm</Link></li>
                 </ul>
             </div>
         </div>

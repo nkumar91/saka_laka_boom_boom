@@ -17,6 +17,8 @@ import Event2 from "./components/Event2";
 import Effect from "./components/Effect";
 import EffectKaro from "./components/EffectKaro";
 import MyForm from "./components/FormState/MyForm";
+import Cycle from "./components/LifeCycle/Cycle";
+import Memo from "./components/Memo/Memo";
 export default function App() {
   return (
     <>
@@ -40,6 +42,8 @@ export default function App() {
           <Route path="effect" element={<Effect />}></Route>
           <Route path="effect1" element={<EffectKaro />}></Route>
           <Route path="myform" element={<MyForm/>}></Route>
+          <Route path="cycle" element={<Cycle/>}></Route>
+          <Route path="memo" element={<Memo/>}></Route>
 
 
 

@@ -13,6 +13,8 @@ export default function Header(){
                     <li><Link to="/service">Service</Link></li>
                     <li><Link to="/event">Event</Link></li>
                     <li><Link to="/myform">myForm</Link></li>
+                    <li><Link to="/cycle">Life Cycle </Link></li>
+                    <li><Link to="/memo">memo Concept</Link></li>
                 </ul>
             </div>
         </div>

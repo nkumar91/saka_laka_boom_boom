@@ -15,6 +15,8 @@ export default function Header(){
                     <li><Link to="/myform">myForm</Link></li>
                     <li><Link to="/cycle">Life Cycle </Link></li>
                     <li><Link to="/memo">memo Concept</Link></li>
+                    <li><Link to="/practiceone">PracticeOne</Link></li>
+                    <li><Link to="/ref">useRef</Link></li>
                 </ul>
             </div>
         </div>

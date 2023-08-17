@@ -19,6 +19,8 @@ import EffectKaro from "./components/EffectKaro";
 import MyForm from "./components/FormState/MyForm";
 import Cycle from "./components/LifeCycle/Cycle";
 import Memo from "./components/Memo/Memo";
+import PracticeOne from "./components/Practice/PracticeOne";
+import MyRef from "./components/Ref/MyRef";
 export default function App() {
   return (
     <>
@@ -44,6 +46,8 @@ export default function App() {
           <Route path="myform" element={<MyForm/>}></Route>
           <Route path="cycle" element={<Cycle/>}></Route>
           <Route path="memo" element={<Memo/>}></Route>
+          <Route path="practiceone" element={<PracticeOne/>}></Route>
+          <Route path="ref" element={<MyRef/>}></Route>
 
 
 

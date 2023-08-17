@@ -1,11 +1,13 @@
-import { memo } from "react"
+import { memo, useCallback } from "react"
 
-function Second({name}){
-    //const {name} = props;
+function Second(props){   // PureComponent
+    const {name,kaiseBhejenge} = props;
     console.log("Second Memo")
+
     return (
         <>
-        <p>Second Component {name}</p>
+        <h1>Second Component  Ka State Hai  {name}</h1>
+        <button onClick={()=>kaiseBhejenge("rahul")}>Function call karo</button>
         </>
     )
 }

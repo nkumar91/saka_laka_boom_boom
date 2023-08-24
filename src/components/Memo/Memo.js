@@ -1,6 +1,7 @@
 import { useCallback, useState } from "react";
 import Second from "./Second";
 import First from "./First";
+import UseMemoHooks from "./UseMemoHooks";
 export default function Memo(){
 const [one,setOne] = useState(0);
 const [two,setTwo] = useState(100);
@@ -14,7 +15,9 @@ const fun = useCallback((data)=>{
         <h1>First Component ka State hai Matalb Memo Component{one}</h1>
         <button onClick={()=>setTwo(two+1)}>Button Two</button>
         <Second name = {two} kaiseBhejenge = {fun}/>  */}
-<First />
+{/* <First /> */}
+
+<UseMemoHooks />
 
         </>
     )

@@ -17,6 +17,7 @@ export default function Header(){
                     <li><Link to="/memo">memo Concept</Link></li>
                     <li><Link to="/practiceone">PracticeOne</Link></li>
                     <li><Link to="/ref">useRef</Link></li>
+                    <li><Link to="/reducer">Reducer Kholo Na</Link></li>
                 </ul>
             </div>
         </div>

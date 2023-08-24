@@ -21,6 +21,9 @@ import Cycle from "./components/LifeCycle/Cycle";
 import Memo from "./components/Memo/Memo";
 import PracticeOne from "./components/Practice/PracticeOne";
 import MyRef from "./components/Ref/MyRef";
+import Reducer from "./components/Reducer/Reducer";
+import Main from "./components/Loading/Main";
+import { Suspense } from "react";
 export default function App() {
   return (
     <>
@@ -28,7 +31,7 @@ export default function App() {
       {/* <About /> */}
       {/* <About />
       <Contact /> */}
-
+<Suspense>
       <Router>
         <Routes>
           <Route path="/" element={<Home />}></Route>
@@ -48,13 +51,15 @@ export default function App() {
           <Route path="memo" element={<Memo/>}></Route>
           <Route path="practiceone" element={<PracticeOne/>}></Route>
           <Route path="ref" element={<MyRef/>}></Route>
+          <Route path="reducer" element={<Reducer/>}></Route>
+          <Route path="lazy" element={<Main />}></Route>
 
 
 
           <Route path="*" element={<MatchNahiHua />}></Route>
         </Routes>
       </Router>
-
+      </Suspense>
 
     </>
   )

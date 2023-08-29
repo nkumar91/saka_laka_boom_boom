@@ -18,6 +18,7 @@ export default function MyForm(){
             {formData==="simple"?<SimpleForm />:null}
             {formData==="multiple"?<MultipleForm />:null} 
             <DynamicForm />
+
         </>
     )
 }

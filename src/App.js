@@ -24,6 +24,8 @@ import MyRef from "./components/Ref/MyRef";
 import Reducer from "./components/Reducer/Reducer";
 import Main from "./components/Loading/Main";
 import { Suspense } from "react";
+import MainData from "./context/MainData";
+import Login from "./components/Login/Login";
 export default function App() {
   return (
     <>
@@ -31,6 +33,7 @@ export default function App() {
       {/* <About /> */}
       {/* <About />
       <Contact /> */}
+      <MainData>
 <Suspense>
       <Router>
         <Routes>
@@ -53,6 +56,7 @@ export default function App() {
           <Route path="ref" element={<MyRef/>}></Route>
           <Route path="reducer" element={<Reducer/>}></Route>
           <Route path="lazy" element={<Main />}></Route>
+          <Route path="login" element={<Login />}></Route>
 
 
 
@@ -60,7 +64,7 @@ export default function App() {
         </Routes>
       </Router>
       </Suspense>
-
+      </MainData>
     </>
   )
 }

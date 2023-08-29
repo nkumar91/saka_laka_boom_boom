@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import Header from "../Layout/Header"
+import { ProfileContext } from "../../context/MainContext"
 
 export default function Cycle(){
 const [counter,setCounter] = useState(0)
+const {loginData} = useContext(ProfileContext);
     useEffect(()=>{
         console.log("part 1")
     })
@@ -30,7 +32,7 @@ const [counter,setCounter] = useState(0)
    
 
         <button onClick={()=>setCounter(counter+1)}>counter {counter}</button>
-        
+        <h1>{loginData?.email}</h1>
         </>
     )
 }

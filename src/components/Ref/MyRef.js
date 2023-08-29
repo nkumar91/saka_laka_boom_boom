@@ -1,7 +1,11 @@
-import { useRef } from "react"
+import { useContext, useRef } from "react"
+import { ProfileContext } from "../../context/MainContext";
+import { Link } from "react-router-dom";
 
 export default function MyRef()
 {
+
+  const {name,loginData} =   useContext(ProfileContext)
     const m = useRef();
     const m1 = useRef();
     function handleClick(){
@@ -25,6 +29,11 @@ export default function MyRef()
         <input type="text" ref={m}></input>
         <input type="file" ref={m1}></input>
         <button onClick={handleClick}>Click</button>
+<h1>{name}</h1>
+<h1>{loginData?.email}</h1>
+
+<Link to="/cycle">Cycle</Link>
+
         </>
     )
 }
